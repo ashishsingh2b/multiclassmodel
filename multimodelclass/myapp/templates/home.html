@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School details</title>
+    <style>
+        table,th,tr,td {
+            border: 1px solid black
+        }
+    </style>
+</head>
+<body>   
+<table>
+    <h3>Common Details</h3>
+    <th>fname</th>
+    <th>lname</th>
+    <th>city</th>
+    <th>schoolname</th>
+    <th>indexno</th>
+    {% for commoninfo in commoninfos %}
+    <tr>
+        
+        <td>{{commoninfo.fname}}</td>
+        <td>{{commoninfo.lname}}</td>
+        <td>{{commoninfo.city}}</td>
+        <td>{{commoninfo.schoolname}}</td>
+        <td>{{commoninfo.indexno}}</td>
+    </tr>
+
+    {% endfor %}
+</table>
+
+<table>
+
+    <h3>Students  Data</h3>
+    <th>parentsname</th>
+    <th>percentage</th>
+    <th>presentday</th>
+    
+    {% for student in students  %}
+    <tr>
+        <td>{{student.parentsname}}</td>
+        <td>{{student.percentage}}</td>
+        <td>{{student.presentday}}</td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+<table>
+    <thead>
+        <tr>
+            <th>Salary</th>
+            <th>Subject Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for teacher in teachers %}
+        <tr>
+            <td>{{ teacher.salary }}</td>
+            <td>{{ teacher.subjectname }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+
+</body>
+</html>

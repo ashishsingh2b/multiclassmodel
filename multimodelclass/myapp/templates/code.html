@@ -1,0 +1,16 @@
+<h3>Students Details</h3>
+    <th>Id</th>
+    <th>fname</th>
+    <th>lname</th>
+    <th>city</th>
+    <th>schoolname</th>
+    <th>Parentsname</th>
+    <th>percentage</th>
+    <th>presentday</th>
+   {% for student in Students  %}
+   <tr>
+    <td>{student.id}</td>
+   </tr>
+   
+   
+   {% endfor %}
